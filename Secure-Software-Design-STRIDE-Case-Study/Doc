@@ -1,1 +1,56 @@
-s
+Case Study: Microsoft’s Use of STRIDE Threat Modeling in Designing Azure
+1. Main Objective of the Software/System (in terms of Business and Customer)
+Microsoft Azure is a cloud computing platform that offers Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). The primary business goal is to provide scalable, reliable, and secure cloud services to enterprises globally. For customers, the focus is on flexibility, data integrity, and trust. Security is a key concern for users shifting workloads to the cloud, so secure software design plays a crucial role.
+
+2. What Model They Chose in Their Development?
+Microsoft adopted the STRIDE threat modeling framework during the development of Azure. STRIDE is a mnemonic for six types of security threats:
+
+Spoofing identity
+
+Tampering with data
+
+Repudiation
+
+Information disclosure
+
+Denial of service
+
+Elevation of privilege
+
+3. Why They Chose That Model?
+STRIDE was selected because it provides a structured method to identify potential threats at the architecture level. Given the scale and sensitivity of Azure’s services, Microsoft needed a proactive approach to security—one that integrates into early design stages. STRIDE helps in evaluating threats comprehensively, especially in multi-tenant environments like cloud platforms.
+
+4. Implementation of Model
+During system design, Microsoft creates Data Flow Diagrams (DFDs) of their architecture and applies the STRIDE model to each component and data flow. For instance:
+
+Authentication modules were tested against Spoofing threats.
+
+Communication channels were checked for Tampering and Information Disclosure.
+
+Logs and audit trails were designed to prevent Repudiation. Each threat category was addressed through specific controls like multi-factor authentication, encryption (TLS), detailed logging, and role-based access control.
+
+5. Important Factors
+Early Integration of Security: STRIDE is applied during design, not after development.
+
+Automation Tools: Microsoft uses tools like Threat Modeling Tool (TMT) to automate and visualize threats.
+
+Cross-Team Collaboration: Both software engineers and security teams work together in the modeling phase.
+
+Compliance Requirements: Azure meets standards like ISO 27001 and SOC 2, requiring secure-by-design principles.
+
+6. Advantages of Their Approach
+Threat Prevention: Early identification helps in reducing vulnerabilities before deployment.
+
+Cost-Effective Security: Fixing design-level issues is cheaper than post-deployment patches.
+
+Customer Trust: Secure systems result in better adoption and reputation.
+
+Scalability: A reusable threat modeling framework helps secure future Azure services consistently.
+
+References:
+Microsoft Azure Security Documentation. https://learn.microsoft.com/en-us/azure/security/
+
+Shostack, A. (2014). Threat Modeling: Designing for Security. Wiley.
+
+Microsoft Threat Modeling Tool. https://learn.microsoft.com/en-us/security/engineering/threat-modeling-tool
+
